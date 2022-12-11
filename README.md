@@ -1,3 +1,2 @@
-# EnhancedGeology
-Pane quotidiano per geologi minecraftiani
-
+# BetterElectrics
+More batteries
