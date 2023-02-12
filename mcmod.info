@@ -1,0 +1,17 @@
+[
+{
+  "modid": "zeusperipherals",
+  "name": "ZeusPeripherals",
+  "description": "RGBCraft server mod which adds some machines made by Zeus S.p.A.",
+  "version": "1.0",
+  "mcversion": "1.4.7",
+  "logoFile": "/mcp.png",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["Lorenzo Toores (LolzDEV)"],
+  "credits": "",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
