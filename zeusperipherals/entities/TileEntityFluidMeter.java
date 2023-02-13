@@ -52,7 +52,7 @@ public class TileEntityFluidMeter extends TileEntity implements IPeripheral, ITa
                         throw new IllegalArgumentException("Argument must be a number");
                     }
                 } else {
-                    throw new IllegalArgumentException("Too few arguments. Expected 1");
+                    throw new IllegalArgumentException("Incorrect arguments amount. Expected 1");
                 }
             case 1:
                 this.input = !input;
