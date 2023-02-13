@@ -12,14 +12,16 @@ import zeusperipherals.CreativeTab;
 import zeusperipherals.entities.TileEntityFluidMeter;
 import zeusperipherals.utils.BlockUtils;
 
-public class FluidMeter extends BlockContainer {
+public class BlockFluidMeter extends BlockContainer {
 
-    protected FluidMeter(int id, Material material) {
+    protected BlockFluidMeter(int id, Material material) {
         super(id, material);
 
         setBlockName("fluidExtractor");
         setCreativeTab(CreativeTab.tabZeusPeripherals);
         setTextureFile("/zeusperipherals/textures/textures.png");
+        setHardness(1.5F);
+        setResistance(10.0F);
     }
 
     @SideOnly(Side.CLIENT)
@@ -67,6 +69,6 @@ public class FluidMeter extends BlockContainer {
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLiving entity) {
         super.onBlockPlacedBy(world, x, y, z, entity);
 
-        world.setBlockMetadataWithNotify(x, y, z, BlockUtils.getAdjacent(BlockUtils.getBlockDirection(entity.rotationYaw).getOpposite()).ordinal());
+        world.setBlockMetadataWithNotify(x, y, z, BlockUtils.getAdjacent(BlockUtils.getBlockDirection(entity.rotationYaw)).ordinal());
     }
 }

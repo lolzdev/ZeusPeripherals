@@ -42,7 +42,11 @@ public class TileEntityFluidMeter extends TileEntity implements IPeripheral, ITa
             case 0:
                 if (args.length == 1) {
                     if (args[0] instanceof Double) {
-                        this.tank.setCapacity(((Double) args[0]).intValue());
+                        if ((Double) args[0] <= 10000 && (Double) args[0] >= 0) {
+                            this.tank.setCapacity(((Double) args[0]).intValue());
+                        } else {
+                            throw new IllegalArgumentException("Argument must be from 0 to 10000");
+                        }
                         return new Object[0];
                     } else {
                         throw new IllegalArgumentException("Argument must be a number");
